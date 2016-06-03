@@ -1,0 +1,83 @@
+https://github.com/tvandame/back-end-developer-interview-questions
+
+and
+
+
+Magento=============
+How may years of experience do you have in Magento?
+Can you say something about the technical challenges you have tackled in Magento?
+What kind of problems did you encounter and how did you find an anser and solve them?
+What kind of Magento projects did you do? (preferably for a couple of projects per project minimally one line description of what kind of functionalities you implemented)
+Do you have Magento certification?
+How would you start creating a new extension?
+Do know about moduleCreator? Did you use it? What do you think about it?
+When would you modify core files?
+Are you familiar with the rewrite functionality in the config.xml? How did you use it?
+Do you have a solution for the rewrite conflict issue in Magento? What were the different solutions you've used?
+Are you familiar with modman? Did you use it? What do you think about it?
+Can you describe your programming experience with the following topics in Magento:
+
+    Tax
+    Quotes
+    Orders
+    Invoices/Creditmemos
+    EAV (customer, catalog, product, etc)
+    Multi-language website
+    Shipping
+    Payment
+    Overriding models/blocks
+    Overriding controller
+    Config XML
+    Debugging
+    Performance
+
+Debugging============
+Are you familiar with xdebug? What features of xdebug do you use, how and why?
+Do you sometimes trace code by stepping through it? How?
+Did you ever use xdebug trace log functionality? Why? How?
+Did you ever use xdebug profiling functionality? Are you familiar with cachegrind?
+
+Logging==============
+Do you know how to configure (error) logging in PHP? How?
+Where are the errors logged to?
+Do you know how to do log messages in Magento? What level did you use? How?
+In what situations in the code would you use logging messages in Magento?
+Do you like to log as little as possible or as much as possible? Please explain.
+
+IDE / Editor================
+What editor(s) are you using? On what platform(s)?
+Please describe your linux/unix experience?
+Are you using Apache on your development environment? Why/why not?
+Which editor do you prefer and why?
+Which editor do you use for actually programming Magento?
+
+Version control=============
+Are you familiar with version control systems such as git, svn, mercurial, etc?
+How do you prefer to work with many developers on the same project regarding to version control?
+Do know how to create branches and do merges? Can you describe how you resolve conflicts?
+Can you describe the process you use to commit code? (e.g. do a diff before committing, etc)
+
+Quality Assurance (QA)================
+Are you familiar with unittesting: PHPUnit, Mage_Test, Ecomdev_PHPUnit, Selenium? How and when would you use it?
+Describe your knowledge/experience with Mock objects
+What are your ideas about code quality?
+Do you use coding standards? Why? How/which?
+Describe your knowledge/experience with unit testing (incl. code coverage reports, CRAP score)
+Describe your knowledge/experience with continuous integration (like Jenkins). What do you think about it?
+Can you descibe your process regarding release management? (e.g. which steps do you take to get code from your development environment to production)
+Please include the tools you use for this
+How do you deal with different configurations for Magento on these different environments? (e.g. different URL)
+Issue tracking / Project management
+Describe your experience with issue tracking and/or project management systems to keep track of work/tasks/issues. Which have you used and which did you like best and why? (e.g. asana, assembly, basecamp, pivotal, redmine, git, trac, mantis, bugzilla, etc)
+
+Apache====================
+Can you tell us a bit about your Apache expertise?
+Describe some complex Rewriting rules and access control configurations in Apache that you have used
+
+MySQL==============
+Describe your expertise in MySQL
+Did you ever encounter version-related problems with MySQL? Could you describe them and the solution you have implemented.
+
+Cron=======================
+Do know how to configure cron jobs from the command line on *nix?
+Do know how to configure cron jobs in Magento? - See more at: http://www.magentron.com/blog/2012/05/06/questions-to-ask-when-interviewing-a-candidate-magento-developer#sthash.3CSuUtrP.dpuf
