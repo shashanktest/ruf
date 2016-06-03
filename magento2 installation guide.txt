@@ -1,0 +1,214 @@
+hi all
+=====================
+http://www.webmull.com/category/magento/magento-2/
+http://devdocs.magento.com/guides/v2.0/frontend-dev-guide/layouts/layout-practice.html
+
+https://www.youtube.com/watch?v=2-zwsohmGsE
+http://www.webmull.com/magento-2-create-new-custom-theme/
+
+http://www.sessiondigital.com/magento/magento-2-tutorials/#
+
+How to install magento 2 
+first you need to download the magento2 latest zip from the magentocommerce.com/download
+
+then after check your configuration of php/apache/mysql according to magento 2 
+
+then unzip the magento 2 on your working root directory and start the installation process.
+
+after the installation process you need to run a command from your root
+=======================================================================
+bin/magento setup:static-content:deploy
+=======================================================================
+
+If you  want flush the cache then you can do it using 
+=======================================================================
+php bin/magento cache:flush
+=======================================================================
+
+If you want to do reindexing then you can do it using
+=======================================================================
+php bin/magento indexer:reindex
+=======================================================================
+
+Then after you need to enabled the rewrite mode
+=======================================================================
+sudo a2enmod rewrite
+=======================================================================
+
+And restart the apache server
+=======================================================================
+sudo service apache2 restart
+=======================================================================
+
+Then after adding something on 
+=======================================================================
+sudo nano /etc/apache2/sites-available/000-default.conf
+=======================================================================
+<Directory "/var/www/html">
+    AllowOverride All
+</Directory>
+=======================================================================
+
+And restart the apache server
+=======================================================================
+sudo service apache2 restart
+=======================================================================
+
+And in htacess file add
+=======================================================================
+RewriteEngine on
+RewriteBase /magento2c/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /magento2c/index.php [L]
+=======================================================================
+
+How to run cron in magento 2
+=======================================================================
+php bin/magento cron:run
+=======================================================================
+
+after adding a new module file need to run
+
+php bin/magento setup:upgrade
+
+http://blog.magestore.com/how-to-create-a-simple-module-in-magento-2-0/
+
+Enabled module magento 2=====
+php -f bin/magento module:enable --clear-static-content Pulsestorm_HelloWorldMVVM
+
+
+Check status of module in magento 2 =========================
+
+php bin/magento module:status
+
+
+string(57) "Pulsestorm\HelloWorldMVVM\Controller\Hello\World::execute" 
+
+overwrite the theme template
+
+http://ashutoshpandey.in/creating-a-theme-in-magento-2/
+
+=================================================
+
+
+Magento 2: Flush the cache using Command Line
+
+February 17th, 2016|Magento, Magento 2|0 Comments
+
+If there is no any access of admin. Without login at admin side we can clear che cache.
+Now, here we are describing the command:
+
+Enable the cache use this:
+php bin/magento cache:enable
+
+Disable the cache use this:
+php bin/magento cache:disable
+
+Flush the cache use this:
+php bin/magento cache:flush
+
+Clean the cache in the site:
+php bin/magento cache:clean
+
+
+===========================================
+
+Magento 2: Apply the schedule for theme
+
+February 4th, 2016|Magento, Magento 2|0 Comments
+
+In the magento 2 we can set the schedule for different theme.
+
+1) Login to Admin panel
+2) Go to Content > Design > Schedule
+3) Click on “Add new Design” theme
+4) Select the theme,start date, from date and save the design theme
+
+===========================================
+
+Magento 2: Reindex using Command line
+
+February 3rd, 2016|Magento, Magento 2|0 Comments
+
+We are thinking how we will run the indexing using command line and which command we will use to run this.
+
+Now here we are describing the command:
+
+If we need to do whole index management in the site we will run the following command in project
+
+In root magento directory
+php bin/magento indexer:reindex
+
+in root/bin directory
+php magento indexer:reindex
+=============================================
+
+Magento 2: Create Custom Query
+
+February 1st, 2016|Magento, Magento 2|2 Comments
+
+Now You are thinking How we will get write the core Query in Magento.
+
+Let’s Start. Here We give the example of insert, update, delete, select.
+
+1. Insert
+
+$themeId=3;
+$this->_resources = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Framework\App\ResourceConnection');
+$connection= $this->_resources->getConnection();
+
+$themeTable = $this->_resources->getTableName('theme');
+$sql = "Insert into " . $themeTable . "(theme_id,theme_path) Values (" . $themeId . ",'webmull/christmastheme' )";
+$connection->query($sql);
+
+ 2. Update
+
+$themeId=3;
+$this->_resources = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Framework\App\ResourceConnection');
+$connection= $this->_resources->getConnection();
+ 
+$themeTable = $this->_resources->getTableName('theme');
+$sql = "Update FROM " . $themeTable . " set theme_path='webmull/christmastheme' WHERE theme_id = " . $themeId . ";";
+$connection->query($sql);
+
+3. Delete
+	
+$themeId=3;
+$this->_resources = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Framework\App\ResourceConnection');
+$connection= $this->_resources->getConnection();
+ 
+$themeTable = $this->_resources->getTableName('theme');
+$sql = "DELETE FROM " . $themeTable . " WHERE theme_id = " . $themeId . ";";
+$connection->query($sql);
+
+4. Select
+
+$themeId=3; 
+$this->_resources = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Framework\App\ResourceConnection');
+$connection= $this->_resources->getConnection();
+ 
+$themeTable = $this->_resources->getTableName('theme');
+$sql = "Select * FROM " . $themeTable . " WHERE theme_id = " . $themeId . ";";
+$connection->query($sql);
+
+
+=============================================
+Magento 2: PHP extension error at the time of Installation
+
+January 29th, 2016|Magento, Magento 2|0 Comments
+
+When we try to install Magento 2 in our wamp server we got the error
+error1
+Solution:
+1) Go to the path D:/wamp/bin/php/php5.5.12 select all file and select and copy the file which start with “icu”
+
+
+
+
+
