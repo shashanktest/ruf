@@ -1,0 +1,34 @@
+1. create reporisrty on Git HUB website and assing team c and Git Admins
+2. then On local pc,, open gitbash and go to ur project folder...where yuo will have all projetc files along with .gitigonre.
+3. then run "git clone repo url" on git bash...it will create copy of repo on ur local pc
+4. Then reun "git add -A" command
+5. Then "Git Commit -m"
+6. It will update code in MASTER Brnach on GIT website
+7. Then run "git checkout -b develop" , it will create new branch DEVELOP
+8. then run "git push origin develop:develop" ...it will copy all files in develop
+
+ABOVE WORK DONE BY TEAMLEAD
+
+
+NOW FORM DEVEOLOPER -
+1. He will go on GIT website and FORK the repo....this will just create REPO with developer account and devloper account git URL.
+2. No whe will do GIT CLONE from FROK URL --  " git clone fork url"
+3. now he we will set origin URL using command -  "git remote set-url origin(remote url -  this will be willams commerce repo url)"
+4. now he we will set origin URL for him self using command -  "git remote add <developer name> fork repo url of developer"
+5. Now do "git remote -v", there will b 4 urls. 2 for Main origin (williams comemrce) and 2 for developer from which he wil do work.
+6. Developer must be inside DEVELOP branch. ex( git checkout -b develop)
+7. Then he will made changes at their end.
+8. And then he will run command  "git push <developer remot name - which we added at step -4> develop:develop"
+9. Then he can see the changes updated on develop branch on Git Hub website and then need to click on "Compare and PULL request button " to Team lead.
+10. Then Team lead can merge code from Git Hub Website manuly.
+11. Then we will call it form Putty to live website from Master Branch.
+12. Website must be run with MASTR Branch.
+
+
+
+Extra:
+then when you're ready to put mobiledevicesupport into master, first merge in master like above, then ...
+git checkout master
+git merge mobiledevicesupport
+git push origin master
+
