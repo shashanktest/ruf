@@ -1,0 +1,10 @@
+from test server through putty:
+>git status
+>git add -A
+>git commit -m "checkout task completed"
+>git remote -v (for checking remote)
+>git push shashank develop:develop
+>after this go to github.com and click wclshashank dropdown>check repository right 
+side(glitzy-secret-new)>change branch master to develop>check all changes the click new pull request.thas it.
+
+Then go to server and check git status and run git pull origin develop
